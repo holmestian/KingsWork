@@ -46,8 +46,8 @@ public class MatrixTools {
         return result;
     }
 
-    public static double[] vectorMultiple(double[] a, double[] b){
-        if (a.length != b.length){
+    public static double[] vectorMultiple(double[] a, double[] b) {
+        if (a.length != b.length) {
             return null;
         }
         double[] result = new double[a.length];
@@ -57,14 +57,14 @@ public class MatrixTools {
         return result;
     }
 
-    public static double[] vectorNormalize(double[] m){
+    public static double[] vectorNormalize(double[] m) {
         double sum = 0;
         double[] result = new double[m.length];
         for (int i = 0; i < m.length; i++) {
             sum += m[i];
         }
         double test = 0.0 / sum;
-        if (Double.isNaN(test)){
+        if (Double.isNaN(test)) {
             return m;
         }
         for (int i = 0; i < m.length; i++) {
@@ -91,8 +91,8 @@ public class MatrixTools {
         double[][] ans = multiple(test, test2);
         double[][] t = transpose(test);
         double[][] n = normalize(test2);
-        double[] a = {0,0,0};
-        double[] b = {4,5,6};
+        double[] a = {0, 0, 0};
+        double[] b = {4, 5, 6};
         double[] v = vectorMultiple(a, b);
         double[] nn = vectorNormalize(a);
     }

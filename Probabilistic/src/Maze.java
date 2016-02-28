@@ -61,7 +61,7 @@ public class Maze {
     // is the location x, y on the map, and also a legal floor tile (not a wall)?
     public boolean isLegal(int x, int y) {
         // on the map
-        if(x >= 0 && x < width && y >= 0 && y < height) {
+        if (x >= 0 && x < width && y >= 0 && y < height) {
             // and it's a floor tile, not a wall tile:
             return getChar(x, y) != '#';
         }
@@ -71,7 +71,7 @@ public class Maze {
 
     public String toString() {
         String s = "";
-        for (int y = height-1; y >= 0; y--) {
+        for (int y = height - 1; y >= 0; y--) {
             for (int x = 0; x < width; x++) {
                 s += grid[y][x];
             }
@@ -82,7 +82,7 @@ public class Maze {
 
     public static void main(String args[]) {
         Maze m = Maze.readFromFile("simple.maz");
-        System.out.println(m.isLegal(1,0));
+        System.out.println(m.isLegal(1, 0));
         System.out.println(m);
     }
 
